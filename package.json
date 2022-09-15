@@ -1,7 +1,11 @@
 {
-  "name": "pos-v2",
+  "name": "next-template",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.x",
+    "npm": "8.15.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,9 +13,13 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "core-js": "^3.25.1",
+    "mobx": "^6.6.2",
     "next": "12.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "^17.0.0 ",
+    "react-dom": "^17.0.0 ",
+    "redoc": "^2.0.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
