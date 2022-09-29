@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Alice",
+    "email": "alice@prisma.io"
+  },
+  {
+    "name": "Nilu",
+    "email": "nilu@prisma.io"
+  },
+  {
+    "name": "Mahmoud",
+    "email": "mahmoud@prisma.io"
+  }
+]
