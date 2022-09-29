@@ -6,58 +6,65 @@
 - [x] [eslint](https://eslint.org/)
 - [x] [lint-staged](https://github.com/okonet/lint-staged)
 - [x] [husky](https://github.com/typicode/husky)
+- [x] [prisma](https://www.prisma.io/nextjs)
 
 ## Getting Started
 
 ### Requirements
 
 ```
-# https://nodejs.org/en/
 node >= 16.x  
 npm >= 8.15.0
 ```
 
-### Installation
+### Setting up the database
 
-```
-git clone https://github.com/hec7orci7o/next-template.git
-npm install
+> **Note**
+> To change the database you have to modify the `provider` value found in the `prisma/schema.prisma` file and the environment variable `DATABASE_URL`
+
+``` bash
+npx prisma generate
+npx prisma db push
 ```
 
-### No Docker Usage
+> **Warning**
+> If your project does not require a database, you can follow the following actions.
+
+``` bash
+npm uninstall prisma @prisma/client
+rm -rf prisma
+```
+
+### Running the app
 
 #### Development
 
-```
+``` bash
 npm run dev
 ```
 
 #### Production
 
-```
+##### Without Docker
+
+``` bash
 npm run build
 npm run start
 ```
 
-### Docker Usage - Production
-
-#### Docker Build
-
-```
-# Build images
+##### With Docker 
+```bash
 docker build --tag next-template-image .
 docker build --tag nginx-image ./nginx
 
-# Create shared network
 docker network create my-network
 
-# Run containers
 docker run --network my-network --name next-template-container next-template-image
 docker run --network my-network --link next-template-container:nextjs --publish 80:80 nginx-image
 ```
 
-#### Docker-compose
+##### With Docker Compose
 
-```
+```bash
 docker-compose up -d
 ```
