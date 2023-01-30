@@ -14,6 +14,7 @@
 
 - `nginx`:
 - `components`:
+- `context`:
 - `hooks`:
 - `lib`:
 - `pages`:
