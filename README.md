@@ -1,4 +1,8 @@
 # next-template
+
+![npm](https://img.shields.io/badge/npm-8.15.0-blue)
+![node](https://img.shields.io/badge/node-16.x-blue)
+
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
