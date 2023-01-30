@@ -6,22 +6,19 @@
 ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
 
-#### Documentation
-- [x] [nextjs](https://nextjs.org/)
-- [x] [tailwindcss](https://tailwindcss.com/)
-- [x] [eslint](https://eslint.org/)
-- [x] [lint-staged](https://github.com/okonet/lint-staged)
-- [x] [husky](https://github.com/typicode/husky)
-- [x] [prisma](https://www.prisma.io/nextjs)
+## Folder structure
+
+- `nginx`:
+- `components`:
+- `hooks`:
+- `lib`:
+- `pages`:
+- `pages/api`:
+- `prisma`:
+- `public`:
+- `styles`:
 
 ## Getting Started
-
-### Requirements
-
-```
-node >= 16.x  
-npm >= 8.15.0
-```
 
 ### Setting up the database
 
@@ -74,3 +71,11 @@ docker run --network my-network --link next-template-container:nextjs --publish 
 ```bash
 docker-compose up -d
 ```
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Express.js features
+
+You can check out [the NextJS GitHub repository](https://github.com/vercel/next.js/)

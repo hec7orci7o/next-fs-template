@@ -10,29 +10,33 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "eslint --cache --fix",
     "prepare": "husky install"
   },
   "dependencies": {
-    "@prisma/client": "^4.4.0",
-    "core-js": "^3.25.1",
-    "mobx": "^6.6.2",
-    "next": "12.3.0",
-    "react": "^17.0.0 ",
-    "react-dom": "^17.0.0 ",
+    "@prisma/client": "^4.9.0",
+    "core-js": "^3.27.2",
+    "fs": "^0.0.1-security",
+    "mobx": "^6.7.0",
+    "@next/font": "13.1.6",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "redoc": "^2.0.0",
-    "styled-components": "^5.3.5"
+    "sitemap": "^7.1.1",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.8",
-    "eslint": "^8.20.0",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.33.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-config-next": "12.2.3",
-    "eslint-plugin-react": "^7.30.1",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "postcss": "^8.4.14",
-    "prisma": "^4.4.0",
-    "tailwindcss": "^3.1.6"
+    "eslint-config-next": "13.1.6",
+    "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "postcss": "^8.4.21",
+    "prisma": "^4.9.0",
+    "tailwindcss": "^3.2.4"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
