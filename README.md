@@ -12,16 +12,20 @@
 
 ## Folder structure
 
-- `nginx`:
-- `components`:
-- `context`:
-- `hooks`:
-- `lib`:
-- `pages`:
-- `pages/api`:
-- `prisma`:
-- `public`:
-- `styles`:
+> **Note** 
+> **_document.js vs. _app.js -- [What is the difference?](https://github.com/vercel/next.js/discussions/39821)**
+
+- `_app.js`: Core of the application, everything is assembled from here at runtime.
+- `_document.js`: Where side effects are possible.
+- `components`: Contains the reusable layouts of the application.
+- `context`: Encapsulates a global state that can be accessed from anywhere in the application.
+- `hooks`: Encapsulates small pieces of code that represent a certain type of logic.
+- `lib`: Chaos property, stores here functionalities that do not have to do with the rest of the mentioned sections. 
+- `pages/api`: Endpoints for creating an api rest.
+- `pages`: pages accessible from the browser via `.../page`
+- `public`: Static content.
+- `styles`: Contains the styles of the application. Override or new styles in `tailwind.config.js`.
+- `nginx`: Contains the nginx server configuration.
 
 ## Getting Started
 
@@ -45,22 +49,31 @@ rm -rf prisma
 
 ### Running the app
 
-#### Development
+#### Run for a development environment
+> **Warning** 
+> This version does not include `nginx` redirectión.<br>Server will be available in: `localhost:3000`
 
-``` bash
+```bash
 npm run dev
 ```
 
-#### Production
+#### Run for a production environment
+> **Warning** 
+> This version does not include `nginx` redirectión.<br>Server will be available in: `localhost:3000`
 
-##### Without Docker
-
-``` bash
+```bash
 npm run build
 npm run start
 ```
 
-##### With Docker 
+#### Run for a production environment with [`pm2`](https://pm2.keymetrics.io/)
+> **Warning** 
+> This version does not include `nginx` redirectión.<br>Server will be available in: `localhost:3000`
+```bash
+pm2 start pm2-deploy.json
+```
+
+#### Compile for docker
 ```bash
 docker build --tag next-template-image .
 docker build --tag nginx-image ./nginx
@@ -71,7 +84,9 @@ docker run --network my-network --name next-template-container next-template-ima
 docker run --network my-network --link next-template-container:nextjs --publish 80:80 nginx-image
 ```
 
-##### With Docker Compose
+#### Compile for docker compose
+> **Note** 
+> This version includes `nginx` redirectión.<br>Server will be available in: `localhost:80`
 
 ```bash
 docker-compose up -d
