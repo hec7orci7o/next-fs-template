@@ -1,4 +1,4 @@
-# next-template [![Production CI](https://github.com/hec7orci7o/next-template/actions/workflows/production.yml/badge.svg?branch=main)](https://github.com/hec7orci7o/next-template/actions/workflows/production.yml)
+# next-fs-template [![Production CI](https://github.com/hec7orci7o/next-template/actions/workflows/production.yml/badge.svg?branch=main)](https://github.com/hec7orci7o/next-template/actions/workflows/production.yml)
 
 ![node](https://img.shields.io/badge/node-16.x-blue)
 ![npm](https://img.shields.io/badge/npm-8.15.0-blue)
