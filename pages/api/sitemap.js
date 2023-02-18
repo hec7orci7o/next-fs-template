@@ -12,7 +12,12 @@ export default async (req, res) => {
     const blacklist = ['_app.js', '_document.js', '_error.js', 'api'];
     const filteredFiles = files
         .filter((file) => !blacklist.includes(file))
-        .map((file) => file.replace('.js', ''));
+        .map((file) => {
+          file = file.replace('.js', '');
+          if (file === 'index') file = '';
+          return file;
+        })
+        .sort();
 
     // Create each URL row
     filteredFiles.forEach((url) => {
