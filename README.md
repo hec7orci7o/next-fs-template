@@ -54,6 +54,7 @@ rm -rf prisma
 > This version does not include `nginx` redirectión.<br>Server will be available in: `localhost:3000`
 
 ```bash
+npm i --force
 npm run dev
 ```
 

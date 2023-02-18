@@ -15,12 +15,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@next/font": "13.1.6",
     "@prisma/client": "^4.9.0",
     "core-js": "^3.27.2",
+    "crypto": "^1.0.1",
     "fs": "^0.0.1-security",
     "mobx": "^6.7.0",
-    "@next/font": "13.1.6",
     "next": "13.1.6",
+    "next-auth": "^4.19.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "redoc": "^2.0.0",

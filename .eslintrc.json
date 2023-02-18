@@ -21,7 +21,7 @@
     "rules": {
         "react/prop-types": "off",
         "react/react-in-jsx-scope": "off",
-        "require-jsdoc":"off",
-        "max-len":"off"
+        "require-jsdoc": "off",
+        "max-len": "off"
     }
 }
