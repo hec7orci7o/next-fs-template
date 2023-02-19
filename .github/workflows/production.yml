@@ -79,7 +79,7 @@ jobs:
       - name: Cypress run --config video=false
         uses: cypress-io/github-action@v5 # use the explicit version number
         with:
-          install-command: npm run ci --force
+          install-command: npm ci --force
           build: npm run build
           start: npm start
           wait-on: 'http://localhost:3000'
