@@ -60,8 +60,8 @@ jobs:
       run: npm run build
     - uses: actions/upload-artifact@v3
       with:
-        name: dist
-        path: dist
+        name: .next
+        path: .next
   
   cypress-run:
     name: cypress-run 🧪
@@ -70,12 +70,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
+        with:
+          fetch-depth: 0
+      - name: Install Dependencies
+        run: npm ci --force
+      - uses: actions/download-artifact@v3
+        with:
+          name: .next
+          path: .next
       - name: Cypress run --config video=false
         uses: cypress-io/github-action@v5 # use the explicit version number
         with:
-          build: npm run build
+          command: npm run test:e2e
           start: npm start
           wait-on: 'http://localhost:3000'
 
