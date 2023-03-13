@@ -23,7 +23,7 @@
     "fs": "^0.0.1-security",
     "mobx": "^6.7.0",
     "next": "13.1.6",
-    "next-auth": "^4.19.2",
+    "next-auth": "^4.20.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "redoc": "^2.0.0",
